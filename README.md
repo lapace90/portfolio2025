@@ -38,7 +38,7 @@ par :
 
 ### Ajouter ton CV
 
-Place ton CV dans `/public/cv-ilaria-pace.pdf` et le lien de téléchargement fonctionnera automatiquement.
+Place ton CV dans `/public/ton-cv.pdf` et le lien de téléchargement fonctionnera automatiquement.
 
 ## 🌐 Déploiement
 

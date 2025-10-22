@@ -27,12 +27,13 @@
     letter-spacing: -0.02em;
   }
 
-/* Logo navigation */
-nav .rounded-full {
-  font-family: 'Bonheur Royale', cursive;
-  letter-spacing: 0.05em;
-  font-size: 1.5rem;
-}
+  /* Logo navigation */
+  nav .rounded-full {
+    font-family: 'Bonheur Royale', cursive;
+    letter-spacing: 0.05em;
+    font-size: 1.5rem;
+  }
+
   h2 {
     @apply text-4xl md:text-5xl;
   }
@@ -74,12 +75,6 @@ nav .rounded-full {
     background-position: 0% 50%;
   }
 }
-
-/* .hero-gradient {
-  background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #4facfe);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-} */
 
 /* Effet glassmorphism */
 .card-glass {
@@ -211,11 +206,6 @@ nav .rounded-full {
   background-clip: text;
   letter-spacing: -0.03em;
 }
-
-/* Amélioration du footer */
-/* footer {
-  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-} */
 
 /* Effet pulse sur les badges de statut */
 @keyframes pulse {
