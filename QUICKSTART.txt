@@ -1,0 +1,56 @@
+🚀 DÉMARRAGE RAPIDE - POUR DEMAIN
+=====================================
+
+1. TÉLÉCHARGER LE PROJET
+   - Télécharge tout le dossier portfolio-ilaria
+   - Ouvre-le dans VS Code
+
+2. INSTALLER LES DÉPENDANCES
+   Ouvre un terminal dans le dossier et tape :
+   
+   npm install
+
+3. LANCER LE SITE EN LOCAL
+   
+   npm run dev
+   
+   Ouvre ton navigateur sur http://localhost:5173
+
+4. PERSONNALISER (OPTIONNEL POUR DEMAIN)
+   
+   a) Ajouter ta photo :
+      - Place photo.jpg dans /public/
+      - Remplace le cercle "IP" dans App.vue (ligne ~40)
+   
+   b) Ajouter ton CV PDF :
+      - Place ton CV dans /public/cv-ilaria-pace.pdf
+   
+   c) Ajouter les liens de démo :
+      - Dans App.vue, ligne ~120, remplace "#" par l'URL de démo
+
+5. DÉPLOYER GRATUITEMENT (RAPIDE !)
+   
+   Option A - Netlify (5 minutes) :
+   a) Va sur https://app.netlify.com/drop
+   b) Fais `npm run build` dans le terminal
+   c) Glisse-déposse le dossier `dist` sur Netlify
+   d) Ton site est en ligne ! 🎉
+   
+   Option B - GitHub + Netlify (10 minutes) :
+   a) Crée un repo GitHub
+   b) Push ton code
+   c) Va sur netlify.com
+   d) "New site from Git" > choisis ton repo
+   e) Build: `npm run build`, Publish: `dist`
+   f) Deploy !
+
+6. POUR PLUS TARD
+   - Finalise tes autres projets GitHub
+   - Ajoute-les dans la section projets
+   - Achète un domaine custom (ilariapace.dev)
+
+BESOIN D'AIDE ?
+- Regarde le README.md pour plus de détails
+- Les commentaires dans App.vue expliquent chaque section
+
+Bonne chance pour demain ! 💪
