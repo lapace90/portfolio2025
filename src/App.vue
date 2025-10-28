@@ -1,9 +1,10 @@
 <template>
   <div class="min-h-screen">
     <!-- Navigation -->
+    <!-- Navigation -->
     <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50">
       <div class="container-custom">
-        <div class="flex justify-between items-center py-5">
+        <div class="flex justify-between md:justify-between justify-center items-center py-5">
           <div
             class="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white text-xl font-bold shadow-lg">
             IP
@@ -120,7 +121,7 @@
               </div>
             </div>
             <div class="flex gap-4 pt-4 border-t border-gray-200">
-              <a href="http://51.75.31.34:5173/home" target="_blank"
+              <a href="https://campcameleonx.ipace.dev/home" target="_blank"
                 class="text-primary hover:text-blue-700 font-semibold flex items-center gap-1 group">
                 Voir la démo
                 <span class="transform group-hover:translate-x-1 transition-transform">→</span>
@@ -135,11 +136,15 @@
 
           <!-- E-commerce Symfony -->
           <div class="card-glass hover-3d">
-            <div class="mb-6">
+             <div class="mb-6 flex gap-2">
               <span
-                class="inline-flex items-center gap-1.5 bg-gradient-to-r from-orange-100 to-amber-100 text-orange-800 text-sm font-semibold px-4 py-2 rounded-full">
-                <span class="w-2 h-2 bg-orange-500 rounded-full"></span>
-                En développement
+                class="inline-flex items-center gap-1.5 bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 text-sm font-semibold px-4 py-2 rounded-full status-badge">
+                <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                En production
+              </span>
+              <span
+                class="inline-flex items-center bg-gradient-to-r from-blue-100 to-blue-200 text-blue-800 text-sm font-semibold px-4 py-2 rounded-full">
+                2025
               </span>
             </div>
             <h3 class="text-3xl font-bold mb-4 text-gray-900">Boutique E-commerce</h3>
@@ -174,11 +179,11 @@
               </div>
             </div>
             <div class="flex gap-4 pt-4 border-t border-gray-200">
-              <!-- <a href="http://51.75.31.34:5173/home" target="_blank"
+              <a href="https://shop.ipace.dev/" target="_blank"
                 class="text-primary hover:text-blue-700 font-semibold flex items-center gap-1 group">
                 Voir la démo
                 <span class="transform group-hover:translate-x-1 transition-transform">→</span>
-              </a> -->
+              </a>
               <a href="https://github.com/lapace90/myNewBoutique" target="_blank"
                 class="text-gray-600 hover:text-gray-900 font-semibold flex items-center gap-1 group">
                 GitHub
