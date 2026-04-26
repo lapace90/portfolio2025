@@ -23,7 +23,7 @@ export const projectsMeta = [
   {
     id: 'bottega',
     status: 'production',
-    year: '2025',
+    year: '2026',
     techStack: ['Laravel 12', 'Filament 3', 'PostgreSQL', 'Blade', 'Docker', 'Nginx'],
     demoUrl: 'https://labottegadimontopoli.it',
     githubUrl: 'https://github.com/lapace90/labottega',
@@ -38,7 +38,7 @@ export const projectsMeta = [
     id: 'campcameleonx',
     status: 'production',
     year: '2024–2025',
-    techStack: ['Laravel 12', 'API Platform', 'Vue.js 3', 'PostgreSQL', 'Docker', 'Stripe'],
+    techStack: ['Laravel 12', 'API Platform', 'Vue.js 3', 'PostgreSQL', 'Docker', 'Stripe', 'Nginx'],
     demoUrl: 'https://campcameleonx.ipace.dev/home',
     githubUrl: 'https://github.com/lapace90/CampCameleonX',
     cover: '/images/desert1.jpg',

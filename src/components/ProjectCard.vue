@@ -60,7 +60,7 @@
       <!-- Stack technique -->
       <div class="mb-5 flex flex-wrap gap-1.5">
         <span
-          v-for="tech in project.techStack.slice(0, 5)"
+          v-for="tech in project.techStack.slice(0, 8)"
           :key="tech"
           class="text-xs font-medium px-2.5 py-1 rounded-md bg-blue-50 text-blue-700"
         >
