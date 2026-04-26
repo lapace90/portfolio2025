@@ -9,16 +9,16 @@
         <div class="flex items-center gap-6">
           <!-- Navigation Links - Hidden on mobile -->
           <div class="hidden md:flex gap-8">
-            <a href="#accueil" @click="handleScroll" class="nav-link text-gray-700 hover:text-primary transition-colors duration-200">
+            <a href="/#accueil" @click="handleScroll" class="nav-link text-gray-700 hover:text-primary transition-colors duration-200">
               {{ t.nav.home }}
             </a>
-            <a href="#projets" @click="handleScroll" class="nav-link text-gray-700 hover:text-primary transition-colors duration-200">
+            <a href="/#projets" @click="handleScroll" class="nav-link text-gray-700 hover:text-primary transition-colors duration-200">
               {{ t.nav.projects }}
             </a>
-            <a href="#competences" @click="handleScroll" class="nav-link text-gray-700 hover:text-primary transition-colors duration-200">
+            <a href="/#competences" @click="handleScroll" class="nav-link text-gray-700 hover:text-primary transition-colors duration-200">
               {{ t.nav.skills }}
             </a>
-            <a href="#contact" @click="handleScroll" class="nav-link text-gray-700 hover:text-primary transition-colors duration-200">
+            <a href="/#contact" @click="handleScroll" class="nav-link text-gray-700 hover:text-primary transition-colors duration-200">
               {{ t.nav.contact }}
             </a>
           </div>
@@ -64,10 +64,13 @@ const languageNames = {
 }
 
 const handleScroll = (e) => {
-  e.preventDefault()
-  const target = document.querySelector(e.target.getAttribute('href'))
+  const href = e.currentTarget.getAttribute('href')
+  const hash = href.startsWith('/#') ? href.slice(1) : href
+  const target = document.querySelector(hash)
   if (target) {
+    e.preventDefault()
     target.scrollIntoView({ behavior: 'smooth' })
   }
+  // sinon : navigation normale vers /#section → le router scrollBehavior gère le scroll
 }
 </script>

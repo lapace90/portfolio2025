@@ -13,7 +13,7 @@
       <!-- On duplique les projets pour créer la boucle infinie sans saut -->
       <ProjectCard
         v-for="(project, idx) in duplicatedProjects"
-        :key="`${project.slug}-${idx}`"
+        :key="`${project.id}-${idx}`"
         :project="project"
       />
     </div>
@@ -96,12 +96,10 @@ const duplicatedProjects = computed(() => [...props.projects, ...props.projects]
 
 .carousel-fade-left {
   left: 0;
-  background: linear-gradient(to right, rgb(250 245 255 / 1), rgb(250 245 255 / 0));
 }
 
 .carousel-fade-right {
   right: 0;
-  background: linear-gradient(to left, rgb(250 245 255 / 1), rgb(250 245 255 / 0));
 }
 
 /* Respect du prefers-reduced-motion — accessibilité critique */

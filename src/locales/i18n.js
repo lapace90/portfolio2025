@@ -45,7 +45,9 @@ export const translations = {
           'Co-conçue avec une pharmacienne conseillère',
           'Vérification automatique RPPS et SIRET',
           'Architecture multi-rôles avec privacy by design'
-        ]
+        ],
+        context: "Le secteur pharmaceutique français souffre d'une fragmentation numérique : les professionnels utilisent une multitude d'outils disparates pour la gestion des contacts, la prospection, la communication et la logistique. PharmaLink vise à centraliser ces fonctions dans une application mobile intuitive, facilitant les interactions professionnelles tout en respectant les contraintes réglementaires strictes du secteur."
+        
       },
       bottega: {
         title: 'La Bottega del Gusto',

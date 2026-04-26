@@ -2,7 +2,7 @@
   <div v-if="projectMeta && projectI18n" class="project-detail">
     <!-- Hero -->
     <section class="pt-32 pb-16 hero-gradient relative overflow-hidden">
-      <div class="container-custom relative z-10">
+      <div class="container-custom px-4 md:px-8 relative z-10">
         <router-link to="/#projets" class="inline-flex items-center gap-2 text-white/80 hover:text-white mb-8 transition-colors">
           <span>←</span>
           <span>{{ t.projects.backToList ? t.projects.backToList.replace('↑ ', '') : 'Retour aux projets' }}</span>
@@ -69,33 +69,33 @@
 
     <!-- Contenu principal -->
     <div class="bg-gradient-to-br from-purple-50 via-pink-50/30 to-blue-50/50">
-      <div class="container-custom max-w-4xl py-20">
+      <div class="container-custom max-w-4xl px-4 md:px-8 py-20">
         <!-- Contexte -->
-        <section v-if="projectI18n.detail.context" class="mb-16">
+        <section v-if="projectMeta?.detail?.context" class="mb-16">
           <h2 class="section-heading">{{ t.projects.contextHeading }}</h2>
           <div class="prose-content">
-            <p v-for="(paragraph, idx) in splitParagraphs(projectI18n.detail.context)" :key="idx">
+            <p v-for="(paragraph, idx) in splitParagraphs(projectMeta?.detail?.context)" :key="idx">
               {{ paragraph }}
             </p>
           </div>
         </section>
 
         <!-- Comprendre le métier (optionnelle, mise en valeur) -->
-        <section v-if="projectI18n.detail.businessLogic" class="mb-16 business-section">
+        <section v-if="projectMeta?.detail?.businessLogic" class="mb-16 business-section">
           <h2 class="section-heading">{{ t.projects.businessHeading }}</h2>
           <div class="prose-content">
-            <p v-for="(paragraph, idx) in splitParagraphs(projectI18n.detail.businessLogic)" :key="idx">
+            <p v-for="(paragraph, idx) in splitParagraphs(projectMeta?.detail?.businessLogic)" :key="idx">
               {{ paragraph }}
             </p>
           </div>
         </section>
 
         <!-- Choix techniques -->
-        <section v-if="projectI18n.detail.choices && projectI18n.detail.choices.length" class="mb-16">
+        <section v-if="projectMeta?.detail?.choices?.length" class="mb-16">
           <h2 class="section-heading">{{ choicesHeading }}</h2>
           <div class="space-y-6">
             <div
-              v-for="choice in projectI18n.detail.choices"
+              v-for="choice in projectMeta?.detail?.choices"
               :key="choice.title"
               class="choice-block"
             >
@@ -106,10 +106,10 @@
         </section>
 
         <!-- Roadmap -->
-        <section v-if="projectI18n.detail.roadmap" class="mb-16">
+        <section v-if="projectMeta?.detail?.roadmap" class="mb-16">
           <h2 class="section-heading">{{ t.projects.roadmapHeading }}</h2>
           <div class="prose-content">
-            <p v-for="(paragraph, idx) in splitParagraphs(projectI18n.detail.roadmap)" :key="idx">
+            <p v-for="(paragraph, idx) in splitParagraphs(projectMeta?.detail?.roadmap)" :key="idx">
               {{ paragraph }}
             </p>
           </div>
@@ -151,7 +151,7 @@
     </div>
   </div>
 
-  <!-- Fallback si slug inconnu -->
+  <!-- Fallback si id inconnu -->
   <div v-else class="min-h-screen flex items-center justify-center">
     <div class="text-center">
       <h1 class="text-4xl font-bold mb-4">Projet introuvable</h1>
@@ -169,23 +169,23 @@ import { projectsMeta, getPrevNext } from '../data/projectsMeta'
 const route = useRoute()
 const { t } = useI18n()
 
-const slug = computed(() => route.params.slug)
+const id = computed(() => route.params.id)
 
 // Métadonnées techniques (status, year, stack, urls)
-const projectMeta = computed(() => projectsMeta.find(p => p.id === slug.value))
+const projectMeta = computed(() => projectsMeta.find(p => p.id === id.value))
 
 // Contenu textuel depuis i18n
-const projectI18n = computed(() => t.value.projects[slug.value])
+const projectI18n = computed(() => t.value.projects?.[id.value])
 
-// Navigation prev/next - réactive sur le slug pour fonctionner correctement
+// Navigation prev/next - réactive sur le id pour fonctionner correctement
 // quand on navigue d'un projet à l'autre
 const prevProject = computed(() => {
   if (!projectMeta.value) return null
-  return getPrevNext(slug.value).prev
+  return getPrevNext(id.value).prev
 })
 const nextProject = computed(() => {
   if (!projectMeta.value) return null
-  return getPrevNext(slug.value).next
+  return getPrevNext(id.value).next
 })
 
 // Mapping status → label traduit
@@ -228,7 +228,7 @@ const dotClasses = computed(() => {
 
 // Le titre de la section "choix techniques" diffère pour Carpegram
 const choicesHeading = computed(() => {
-  if (slug.value === 'carpegram') return t.value.projects.choicesHeadingAlt
+  if (id.value === 'carpegram') return t.value.projects.choicesHeadingAlt
   return t.value.projects.choicesHeading
 })
 

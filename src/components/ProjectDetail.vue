@@ -30,7 +30,7 @@
         <!-- Stack -->
         <div class="flex flex-wrap gap-2 mb-8">
           <span
-            v-for="tech in project.stack"
+            v-for="tech in project.techStack"
             :key="tech"
             class="text-sm font-medium px-3 py-1.5 rounded-md bg-white/20 backdrop-blur-sm text-white"
           >
@@ -41,8 +41,8 @@
         <!-- Actions -->
         <div class="flex gap-4 flex-wrap">
           <a
-            v-if="project.links.demo"
-            :href="project.links.demo"
+            v-if="project.demoUrl"
+            :href="project.demoUrl"
             target="_blank"
             rel="noopener"
             class="bg-white text-primary px-6 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-all shadow-lg flex items-center gap-2"
@@ -51,8 +51,8 @@
             <span>↗</span>
           </a>
           <a
-            v-if="project.links.repo"
-            :href="project.links.repo"
+            v-if="project.githubUrl"
+            :href="project.githubUrl"
             target="_blank"
             rel="noopener"
             class="border-2 border-white text-white px-6 py-3 rounded-xl font-semibold hover:bg-white hover:text-primary transition-all flex items-center gap-2"
@@ -142,7 +142,7 @@
           <div class="grid md:grid-cols-2 gap-6">
             <router-link
               v-if="prevProject"
-              :to="`/projects/${prevProject.slug}`"
+              :to="`/projects/${prevProject.id}`"
               class="nav-arrow nav-arrow-prev"
             >
               <span class="nav-arrow-label">← Projet précédent</span>
@@ -152,7 +152,7 @@
 
             <router-link
               v-if="nextProject"
-              :to="`/projects/${nextProject.slug}`"
+              :to="`/projects/${nextProject.id}`"
               class="nav-arrow nav-arrow-next"
             >
               <span class="nav-arrow-label">Projet suivant →</span>
@@ -174,7 +174,7 @@
     </div>
   </div>
 
-  <!-- Fallback si slug inconnu -->
+  <!-- Fallback si id inconnu -->
   <div v-else class="min-h-screen flex items-center justify-center">
     <div class="text-center">
       <h1 class="text-4xl font-bold mb-4">Projet introuvable</h1>
@@ -186,42 +186,44 @@
 <script setup>
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import { getProjectBySlug, getPrevNextProjects } from '../data/projects'
+import { projectsMeta, getPrevNext } from '../data/projectsMeta'
 
 const route = useRoute()
-const slug = computed(() => route.params.slug)
+const id = computed(() => route.params.id)
 
-const project = computed(() => getProjectBySlug(slug.value))
+const project = computed(() => projectsMeta.find(p => p.id === id.value))
 
-// IMPORTANT : on garde les computed réactifs, sinon la navigation
-// prev/next fige sur le premier projet ouvert et ne se met pas à jour.
 const prevProject = computed(() => {
   if (!project.value) return null
-  return getPrevNextProjects(slug.value).prev
+  return getPrevNext(id.value).prev
 })
 const nextProject = computed(() => {
   if (!project.value) return null
-  return getPrevNextProjects(slug.value).next
+  return getPrevNext(id.value).next
 })
 
 const statusClasses = computed(() => {
   if (!project.value) return ''
   const map = {
-    green: 'bg-green-100 text-green-800',
-    orange: 'bg-orange-100 text-orange-800',
-    blue: 'bg-blue-100 text-blue-800',
+    production: 'bg-green-100 text-green-800',
+    development: 'bg-orange-100 text-orange-800',
+    alpha: 'bg-orange-100 text-orange-800',
+    mvp: 'bg-orange-100 text-orange-800',
+    v1: 'bg-orange-100 text-orange-800',
   }
-  return map[project.value.statusColor] || map.blue
+  return map[project.value.status] || 'bg-blue-100 text-blue-800'
 })
 
 const dotClasses = computed(() => {
   if (!project.value) return ''
   const map = {
-    green: 'bg-green-500 animate-pulse',
-    orange: 'bg-orange-500',
-    blue: 'bg-blue-500',
+    production: 'bg-green-500 animate-pulse',
+    development: 'bg-orange-500',
+    alpha: 'bg-orange-500',
+    mvp: 'bg-orange-500',
+    v1: 'bg-orange-500',
   }
-  return map[project.value.statusColor] || map.blue
+  return map[project.value.status] || 'bg-blue-500'
 })
 
 // Helper : transforme un bloc texte en array de paragraphes (double retour = nouveau paragraphe)
