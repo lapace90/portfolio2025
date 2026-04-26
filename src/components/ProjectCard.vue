@@ -67,10 +67,10 @@
           {{ tech }}
         </span>
         <span
-          v-if="project.techStack.length > 5"
+          v-if="project.techStack.length > 8"
           class="text-xs font-medium px-2.5 py-1 rounded-md bg-gray-100 text-gray-500"
         >
-          +{{ project.techStack.length - 5 }}
+          +{{ project.techStack.length - 8 }}
         </span>
       </div>
 

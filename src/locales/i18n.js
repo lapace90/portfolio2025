@@ -4,13 +4,14 @@ export const translations = {
       home: 'Accueil',
       projects: 'Projets',
       skills: 'Compétences',
-      contact: 'Contact'
+      contact: 'Contact',
+      backToPortfolio: 'Retour au portfolio'
     },
     hero: {
       available: 'Disponible pour de nouveaux projets',
       greeting: 'Bonjour, je suis',
-      title: 'Développeuse d\'Applications Full-Stack',
-      description: 'Passionnée par la création d\'applications web performantes et intuitives. Spécialisée en <strong>PHP</strong>, <strong>JavaScript</strong> et <strong>frameworks modernes</strong>, je transforme les besoins métier en solutions techniques élégantes et efficaces.',
+      title: "Conceptrice Développeuse d'Applications",
+      description: "Passionnée par la création d'applications web et mobiles performantes et intuitives. Spécialisée en <strong>PHP</strong>, <strong>JavaScript</strong> et <strong>frameworks modernes</strong>, je transforme les besoins métier en solutions techniques élégantes et efficaces.",
       viewProjects: 'Voir mes projets',
       contact: 'Me contacter'
     },
@@ -18,44 +19,82 @@ export const translations = {
       title: 'Mes Projets',
       inProduction: 'En production',
       inDevelopment: 'En développement',
+      alphaTesting: 'Alpha Play Store',
+      mvpComplete: 'MVP complet',
+      inProgressV1: 'V1 en cours',
       features: 'Fonctionnalités',
       techStack: 'Stack technique',
+      learnMore: 'En savoir plus',
       viewDemo: 'Voir la démo',
       github: 'GitHub',
+      pauseLabel: 'Mettre en pause',
+      resumeLabel: 'Reprendre le défilement',
+      contextHeading: 'Contexte',
+      businessHeading: 'Comprendre le métier avant de coder',
+      choicesHeading: "Les choix techniques que ça a imposés",
+      choicesHeadingAlt: 'Choix techniques & apprentissages',
+      roadmapHeading: 'Roadmap',
+      prevProject: '← Projet précédent',
+      nextProject: 'Projet suivant →',
+      backToList: '↑ Retour à la liste de projets',
+      pharmalink: {
+        title: 'PharmaLink',
+        tagline: 'Plateforme de matching professionnel pour le secteur pharmaceutique',
+        description: "Application mobile pour les professionnels de la pharmacie française : pharmaciens, officines, animateurs freelance et laboratoires. Système de matching avec géolocalisation, vérification automatique des diplômes, mode anonyme pour utilisateurs en poste.",
+        highlights: [
+          'Co-conçue avec une pharmacienne conseillère',
+          'Vérification automatique RPPS et SIRET',
+          'Architecture multi-rôles avec privacy by design'
+        ]
+      },
+      bottega: {
+        title: 'La Bottega del Gusto',
+        tagline: 'Site vitrine & gestionnaire pour bottega alimentaire toscane',
+        description: "Remplacement d'un site HTML statique par une application Laravel moderne pour une bottega de Montopoli en Val d'Arno. Admin Filament pour personnel non-technique, SEO locale structurée, conformité RGPD stricte.",
+        highlights: [
+          'Admin Filament usable après 5 min de démo',
+          'SEO locale : Schema.org FoodEstablishment + EventSeries',
+          'Privacy by design (EDPB 03/2022)'
+        ]
+      },
       campcameleonx: {
         title: 'CampCameleonX',
-        description: 'Plateforme de réservation pour établissements touristiques avec système de devis en ligne et backoffice de gestion complet.',
-        features: [
-          'Création et validation de devis dynamiques',
-          'Gestion des réservations',
-          'Backoffice d\'administration'
+        tagline: 'Plateforme de gestion pour établissements touristiques',
+        description: "Plateforme API-first pour maison d'hôtes au Maroc : site vitrine, devis en ligne, réservations, paiements Stripe, back-office complet. Projet d'examen CDA transformé en base produit packageable.",
+        highlights: [
+          'API Platform pour Laravel (package émergent)',
+          'Pattern polymorphe Product → Productable',
+          'RBAC : 50 permissions, 6 rôles'
         ]
       },
-      ecommerce: {
-        title: 'Boutique E-commerce',
-        description: 'Plateforme e-commerce complète avec gestion des produits, panier d\'achat, paiements sécurisés et tableau de bord administrateur.',
-        features: [
-          'Catalogue produits avec filtres avancés',
-          'Système de panier et commandes',
-          'Dashboard admin pour gestion complète'
+      tuttoscuola: {
+        title: 'TuttoScuola',
+        tagline: 'Application mobile unifiée pour lycées italiens',
+        description: "Remplace les outils numériques fragmentés des lycées italiens par une app mobile unifiée : messagerie, prenotazioni, notes, devoirs, circolari, marketplace. Architecture multi-tenant, RGPD native, authentification par domaine scolaire.",
+        highlights: [
+          'Publié en closed testing sur Play Store',
+          'Auth restreinte par domaine scolaire',
+          'Multi-tenant dès la conception'
         ]
       },
-      immo: {
-        title: 'Site Agence Immobilière',
-        description: 'Site web pour agence immobilière avec gestion des biens, recherche avancée, espace client et système de rendez-vous en ligne.',
-        features: [
-          'Catalogue de biens avec filtres géolocalisés',
-          'Système de prise de rendez-vous',
-          'Espace client personnalisé'
+      pinkkiwi: {
+        title: 'PinkKiwi',
+        tagline: 'Plateforme e-commerce Symfony complète',
+        description: "Boutique en ligne complète : catalogue, panier, Stripe Checkout, espace client, back-office EasyAdmin. Backend conçu en formation DWWM, repris en projet personnel pour construire le frontend et déployer en production.",
+        highlights: [
+          'Stripe Checkout (PCI simplifié)',
+          'Déployée en production sur VPS OVH',
+          'Emails transactionnels + RGPD'
         ]
       },
       carpegram: {
         title: 'Carpegram',
-        description: 'Application mobile sociale pour passionnés de pêche à la carpe. Partagez vos prises, spots et conseils avec la communauté.',
-        features: [
-          'Fil d\'actualités et partage de photos',
-          'Géolocalisation des spots de pêche',
-          'Messagerie privée entre pêcheurs'
+        tagline: 'Réseau social mobile pour carpistes italiens',
+        description: "Premier projet React Native : un Instagram vertical pour la communauté des pêcheurs à la carpe italiens. Feed, messagerie, cartographie des spots, météo enrichie.",
+        highlights: [
+          'Premier projet React Native',
+          'Architecture en couches stricte',
+          'Cartographie avec privacy par zones'
         ]
       }
     },
@@ -81,18 +120,20 @@ export const translations = {
       madeWith: 'Développé avec ❤️ en Vue.js & Tailwind CSS'
     }
   },
+
   en: {
     nav: {
       home: 'Home',
       projects: 'Projects',
       skills: 'Skills',
-      contact: 'Contact'
+      contact: 'Contact',
+      backToPortfolio: 'Back to portfolio'
     },
     hero: {
       available: 'Available for new projects',
-      greeting: 'Hello, I\'m',
+      greeting: "Hello, I'm",
       title: 'Full-Stack Application Developer',
-      description: 'Passionate about creating high-performance and intuitive web applications. Specialized in <strong>PHP</strong>, <strong>JavaScript</strong> and <strong>modern frameworks</strong>, I transform business needs into elegant and efficient technical solutions.',
+      description: 'Passionate about creating high-performance and intuitive web and mobile applications. Specialized in <strong>PHP</strong>, <strong>JavaScript</strong> and <strong>modern frameworks</strong>, I transform business needs into elegant and efficient technical solutions.',
       viewProjects: 'View my projects',
       contact: 'Contact me'
     },
@@ -100,44 +141,82 @@ export const translations = {
       title: 'My Projects',
       inProduction: 'In production',
       inDevelopment: 'In development',
+      alphaTesting: 'Play Store Alpha',
+      mvpComplete: 'MVP complete',
+      inProgressV1: 'V1 in progress',
       features: 'Features',
       techStack: 'Tech stack',
+      learnMore: 'Learn more',
       viewDemo: 'View demo',
       github: 'GitHub',
+      pauseLabel: 'Pause',
+      resumeLabel: 'Resume scrolling',
+      contextHeading: 'Context',
+      businessHeading: 'Understanding the business before coding',
+      choicesHeading: 'The technical choices it imposed',
+      choicesHeadingAlt: 'Technical choices & lessons learned',
+      roadmapHeading: 'Roadmap',
+      prevProject: '← Previous project',
+      nextProject: 'Next project →',
+      backToList: '↑ Back to projects list',
+      pharmalink: {
+        title: 'PharmaLink',
+        tagline: 'Professional matching platform for the pharmaceutical sector',
+        description: 'Mobile application for French pharmacy professionals: pharmacists, drugstores, freelance promoters and laboratories. Geolocation matching system, automatic credentials verification, anonymous mode for currently employed users.',
+        highlights: [
+          'Co-designed with a pharmacist consultant',
+          'Automatic RPPS and SIRET verification',
+          'Multi-role architecture with privacy by design'
+        ]
+      },
+      bottega: {
+        title: 'La Bottega del Gusto',
+        tagline: 'Showcase site & manager for a Tuscan food shop',
+        description: "Replacement of a static HTML site with a modern Laravel application for a bottega in Montopoli, Val d'Arno. Filament admin for non-technical staff, structured local SEO, strict GDPR compliance.",
+        highlights: [
+          'Filament admin usable after 5 min demo',
+          'Local SEO: Schema.org FoodEstablishment + EventSeries',
+          'Privacy by design (EDPB 03/2022)'
+        ]
+      },
       campcameleonx: {
         title: 'CampCameleonX',
-        description: 'Booking platform for tourist establishments with online quote system and complete backoffice management.',
-        features: [
-          'Dynamic quote creation and validation',
-          'Reservation management',
-          'Administration backoffice'
+        tagline: 'Management platform for tourist establishments',
+        description: 'API-first platform for a guesthouse in Morocco: showcase site, online quotes, bookings, Stripe payments, complete back-office. CDA exam project transformed into a packageable product base.',
+        highlights: [
+          'API Platform for Laravel (emerging package)',
+          'Polymorphic pattern Product → Productable',
+          'RBAC: 50 permissions, 6 roles'
         ]
       },
-      ecommerce: {
-        title: 'E-commerce Store',
-        description: 'Complete e-commerce platform with product management, shopping cart, secure payments and admin dashboard.',
-        features: [
-          'Product catalog with advanced filters',
-          'Cart and order system',
-          'Admin dashboard for complete management'
+      tuttoscuola: {
+        title: 'TuttoScuola',
+        tagline: 'Unified mobile app for Italian high schools',
+        description: 'Replaces the fragmented digital tools of Italian high schools with a unified mobile app: messaging, bookings, grades, homework, announcements, marketplace. Multi-tenant architecture, native GDPR, authentication by school domain.',
+        highlights: [
+          'Published in closed testing on Play Store',
+          'Authentication restricted by school domain',
+          'Multi-tenant from the start'
         ]
       },
-      immo: {
-        title: 'Real Estate Agency Website',
-        description: 'Website for real estate agency with property management, advanced search, client area and online appointment system.',
-        features: [
-          'Property catalog with geolocated filters',
-          'Appointment booking system',
-          'Personalized client area'
+      pinkkiwi: {
+        title: 'PinkKiwi',
+        tagline: 'Complete Symfony e-commerce platform',
+        description: 'Complete online store: catalog, cart, Stripe Checkout, customer area, EasyAdmin back-office. Backend designed during DWWM training, taken over as a personal project to build the frontend and deploy in production.',
+        highlights: [
+          'Stripe Checkout (simplified PCI)',
+          'Deployed in production on OVH VPS',
+          'Transactional emails + GDPR'
         ]
       },
       carpegram: {
         title: 'Carpegram',
-        description: 'Social mobile app for carp fishing enthusiasts. Share your catches, spots and tips with the community.',
-        features: [
-          'News feed and photo sharing',
-          'Fishing spot geolocation',
-          'Private messaging between anglers'
+        tagline: 'Mobile social network for Italian carp anglers',
+        description: 'First React Native project: a vertical Instagram for the Italian carp fishing community. Feed, messaging, spot mapping, enriched weather.',
+        highlights: [
+          'First React Native project',
+          'Strict layered architecture',
+          'Mapping with zone-based privacy'
         ]
       }
     },
@@ -163,18 +242,20 @@ export const translations = {
       madeWith: 'Built with ❤️ using Vue.js & Tailwind CSS'
     }
   },
+
   it: {
     nav: {
       home: 'Home',
       projects: 'Progetti',
       skills: 'Competenze',
-      contact: 'Contatti'
+      contact: 'Contatti',
+      backToPortfolio: 'Torna al portfolio'
     },
     hero: {
       available: 'Disponibile per nuovi progetti',
       greeting: 'Ciao, sono',
-      title: 'Sviluppatrice di Applicazioni Full-Stack',
-      description: 'Appassionata della creazione di applicazioni web performanti e intuitive. Specializzata in <strong>PHP</strong>, <strong>JavaScript</strong> e <strong>framework moderni</strong>, trasformo le esigenze aziendali in soluzioni tecniche eleganti ed efficienti.',
+      title: 'Progettista Sviluppatrice di Applicazioni',
+      description: "Appassionata della creazione di applicazioni web e mobile performanti e intuitive. Specializzata in <strong>PHP</strong>, <strong>JavaScript</strong> e <strong>framework moderni</strong>, trasformo le esigenze aziendali in soluzioni tecniche eleganti ed efficienti.",
       viewProjects: 'Vedi i miei progetti',
       contact: 'Contattami'
     },
@@ -182,44 +263,82 @@ export const translations = {
       title: 'I Miei Progetti',
       inProduction: 'In produzione',
       inDevelopment: 'In sviluppo',
+      alphaTesting: 'Alpha Play Store',
+      mvpComplete: 'MVP completo',
+      inProgressV1: 'V1 in corso',
       features: 'Funzionalità',
       techStack: 'Stack tecnologico',
+      learnMore: 'Scopri di più',
       viewDemo: 'Vedi demo',
       github: 'GitHub',
+      pauseLabel: 'Metti in pausa',
+      resumeLabel: 'Riprendi lo scorrimento',
+      contextHeading: 'Contesto',
+      businessHeading: 'Capire il mestiere prima di programmare',
+      choicesHeading: 'Le scelte tecniche che ne sono derivate',
+      choicesHeadingAlt: 'Scelte tecniche & insegnamenti',
+      roadmapHeading: 'Roadmap',
+      prevProject: '← Progetto precedente',
+      nextProject: 'Progetto successivo →',
+      backToList: '↑ Torna alla lista dei progetti',
+      pharmalink: {
+        title: 'PharmaLink',
+        tagline: 'Piattaforma di matching professionale per il settore farmaceutico',
+        description: "Applicazione mobile per i professionisti della farmacia francese: farmacisti, farmacie, animatori freelance e laboratori. Sistema di matching con geolocalizzazione, verifica automatica dei diplomi, modalità anonima per utenti già in servizio.",
+        highlights: [
+          'Co-progettata con una farmacista consulente',
+          'Verifica automatica RPPS e SIRET',
+          'Architettura multi-ruolo con privacy by design'
+        ]
+      },
+      bottega: {
+        title: 'La Bottega del Gusto',
+        tagline: 'Sito vetrina & gestionale per una bottega alimentare toscana',
+        description: "Sostituzione di un sito HTML statico con un'applicazione Laravel moderna per una bottega di Montopoli in Val d'Arno. Admin Filament per personale non tecnico, SEO locale strutturata, conformità GDPR rigorosa.",
+        highlights: [
+          'Admin Filament usabile dopo 5 min di demo',
+          'SEO locale: Schema.org FoodEstablishment + EventSeries',
+          'Privacy by design (EDPB 03/2022)'
+        ]
+      },
       campcameleonx: {
         title: 'CampCameleonX',
-        description: 'Piattaforma di prenotazione per strutture turistiche con sistema di preventivi online e backoffice di gestione completo.',
-        features: [
-          'Creazione e validazione di preventivi dinamici',
-          'Gestione delle prenotazioni',
-          'Backoffice di amministrazione'
+        tagline: 'Piattaforma di gestione per strutture turistiche',
+        description: "Piattaforma API-first per una maison d'hôtes in Marocco: sito vetrina, preventivi online, prenotazioni, pagamenti Stripe, back-office completo. Progetto d'esame CDA trasformato in base prodotto pacchettizzabile.",
+        highlights: [
+          'API Platform per Laravel (pacchetto emergente)',
+          'Pattern polimorfico Product → Productable',
+          'RBAC: 50 permessi, 6 ruoli'
         ]
       },
-      ecommerce: {
-        title: 'Negozio E-commerce',
-        description: 'Piattaforma e-commerce completa con gestione prodotti, carrello, pagamenti sicuri e dashboard amministratore.',
-        features: [
-          'Catalogo prodotti con filtri avanzati',
-          'Sistema di carrello e ordini',
-          'Dashboard admin per gestione completa'
+      tuttoscuola: {
+        title: 'TuttoScuola',
+        tagline: 'App mobile unificata per i licei italiani',
+        description: "Sostituisce gli strumenti digitali frammentati dei licei italiani con un'app mobile unificata: messaggistica, prenotazioni, voti, compiti, circolari, mercatino. Architettura multi-tenant, GDPR nativa, autenticazione per dominio scolastico.",
+        highlights: [
+          'Pubblicata in closed testing sul Play Store',
+          'Autenticazione limitata al dominio scolastico',
+          'Multi-tenant fin dalla concezione'
         ]
       },
-      immo: {
-        title: 'Sito Agenzia Immobiliare',
-        description: 'Sito web per agenzia immobiliare con gestione immobili, ricerca avanzata, area clienti e sistema di appuntamenti online.',
-        features: [
-          'Catalogo immobili con filtri geolocalizzati',
-          'Sistema di prenotazione appuntamenti',
-          'Area clienti personalizzata'
+      pinkkiwi: {
+        title: 'PinkKiwi',
+        tagline: 'Piattaforma e-commerce Symfony completa',
+        description: "Negozio online completo: catalogo, carrello, Stripe Checkout, area cliente, back-office EasyAdmin. Backend progettato durante la formazione DWWM, ripreso come progetto personale per costruire il frontend e mettere in produzione.",
+        highlights: [
+          'Stripe Checkout (PCI semplificato)',
+          'In produzione su VPS OVH',
+          'Email transazionali + GDPR'
         ]
       },
       carpegram: {
         title: 'Carpegram',
-        description: 'App mobile sociale per appassionati di pesca alla carpa. Condividi le tue catture, spot e consigli con la community.',
-        features: [
-          'Feed di notizie e condivisione foto',
-          'Geolocalizzazione degli spot di pesca',
-          'Messaggistica privata tra pescatori'
+        tagline: 'Social network mobile per carpisti italiani',
+        description: "Primo progetto React Native: un Instagram verticale per la community dei pescatori di carpe italiani. Feed, messaggistica, mappatura degli spot, meteo arricchita.",
+        highlights: [
+          'Primo progetto React Native',
+          'Architettura a livelli rigorosa',
+          'Mappatura con privacy per zone'
         ]
       }
     },
@@ -245,18 +364,20 @@ export const translations = {
       madeWith: 'Sviluppato con ❤️ in Vue.js & Tailwind CSS'
     }
   },
+
   es: {
     nav: {
       home: 'Inicio',
       projects: 'Proyectos',
       skills: 'Competencias',
-      contact: 'Contacto'
+      contact: 'Contacto',
+      backToPortfolio: 'Volver al portfolio'
     },
     hero: {
       available: 'Disponible para nuevos proyectos',
       greeting: 'Hola, soy',
-      title: 'Desarrolladora de Aplicaciones Full-Stack',
-      description: 'Apasionada por la creación de aplicaciones web eficientes e intuitivas. Especializada en <strong>PHP</strong>, <strong>JavaScript</strong> y <strong>frameworks modernos</strong>, transformo las necesidades empresariales en soluciones técnicas elegantes y eficaces.',
+      title: 'Diseñadora Desarrolladora de Aplicaciones',
+      description: 'Apasionada por la creación de aplicaciones web y móviles eficientes e intuitivas. Especializada en <strong>PHP</strong>, <strong>JavaScript</strong> y <strong>frameworks modernos</strong>, transformo las necesidades empresariales en soluciones técnicas elegantes y eficaces.',
       viewProjects: 'Ver mis proyectos',
       contact: 'Contactarme'
     },
@@ -264,44 +385,82 @@ export const translations = {
       title: 'Mis Proyectos',
       inProduction: 'En producción',
       inDevelopment: 'En desarrollo',
+      alphaTesting: 'Alpha Play Store',
+      mvpComplete: 'MVP completo',
+      inProgressV1: 'V1 en curso',
       features: 'Características',
       techStack: 'Stack técnico',
+      learnMore: 'Más información',
       viewDemo: 'Ver demo',
       github: 'GitHub',
+      pauseLabel: 'Pausar',
+      resumeLabel: 'Reanudar el desplazamiento',
+      contextHeading: 'Contexto',
+      businessHeading: 'Entender el negocio antes de programar',
+      choicesHeading: 'Las decisiones técnicas que se impusieron',
+      choicesHeadingAlt: 'Decisiones técnicas & aprendizajes',
+      roadmapHeading: 'Roadmap',
+      prevProject: '← Proyecto anterior',
+      nextProject: 'Proyecto siguiente →',
+      backToList: '↑ Volver a la lista de proyectos',
+      pharmalink: {
+        title: 'PharmaLink',
+        tagline: 'Plataforma de matching profesional para el sector farmacéutico',
+        description: 'Aplicación móvil para los profesionales de la farmacia francesa: farmacéuticos, farmacias, animadores freelance y laboratorios. Sistema de matching con geolocalización, verificación automática de diplomas, modo anónimo para usuarios en activo.',
+        highlights: [
+          'Co-diseñada con una farmacéutica consultora',
+          'Verificación automática RPPS y SIRET',
+          'Arquitectura multi-rol con privacy by design'
+        ]
+      },
+      bottega: {
+        title: 'La Bottega del Gusto',
+        tagline: 'Sitio escaparate & gestor para una bottega alimentaria toscana',
+        description: "Sustitución de un sitio HTML estático por una aplicación Laravel moderna para una bottega de Montopoli en Val d'Arno. Admin Filament para personal no técnico, SEO local estructurado, conformidad GDPR estricta.",
+        highlights: [
+          'Admin Filament utilizable tras 5 min de demo',
+          'SEO local: Schema.org FoodEstablishment + EventSeries',
+          'Privacy by design (EDPB 03/2022)'
+        ]
+      },
       campcameleonx: {
         title: 'CampCameleonX',
-        description: 'Plataforma de reservas para establecimientos turísticos con sistema de presupuestos online y backoffice de gestión completo.',
-        features: [
-          'Creación y validación de presupuestos dinámicos',
-          'Gestión de reservas',
-          'Backoffice de administración'
+        tagline: 'Plataforma de gestión para establecimientos turísticos',
+        description: 'Plataforma API-first para una casa rural en Marruecos: sitio escaparate, presupuestos online, reservas, pagos Stripe, back-office completo. Proyecto de examen CDA transformado en base producto empaquetable.',
+        highlights: [
+          'API Platform para Laravel (paquete emergente)',
+          'Patrón polimórfico Product → Productable',
+          'RBAC: 50 permisos, 6 roles'
         ]
       },
-      ecommerce: {
-        title: 'Tienda E-commerce',
-        description: 'Plataforma e-commerce completa con gestión de productos, carrito de compra, pagos seguros y panel de administración.',
-        features: [
-          'Catálogo de productos con filtros avanzados',
-          'Sistema de carrito y pedidos',
-          'Dashboard admin para gestión completa'
+      tuttoscuola: {
+        title: 'TuttoScuola',
+        tagline: 'App móvil unificada para institutos italianos',
+        description: 'Sustituye las herramientas digitales fragmentadas de los institutos italianos por una app móvil unificada: mensajería, citas, notas, deberes, circulares, mercadillo. Arquitectura multi-tenant, GDPR nativo, autenticación por dominio escolar.',
+        highlights: [
+          'Publicada en closed testing en Play Store',
+          'Autenticación restringida por dominio escolar',
+          'Multi-tenant desde el diseño'
         ]
       },
-      immo: {
-        title: 'Sitio Agencia Inmobiliaria',
-        description: 'Sitio web para agencia inmobiliaria con gestión de propiedades, búsqueda avanzada, área de cliente y sistema de citas online.',
-        features: [
-          'Catálogo de propiedades con filtros geolocalizados',
-          'Sistema de reserva de citas',
-          'Área de cliente personalizada'
+      pinkkiwi: {
+        title: 'PinkKiwi',
+        tagline: 'Plataforma e-commerce Symfony completa',
+        description: 'Tienda online completa: catálogo, carrito, Stripe Checkout, área cliente, back-office EasyAdmin. Backend diseñado durante la formación DWWM, retomado como proyecto personal para construir el frontend y desplegar en producción.',
+        highlights: [
+          'Stripe Checkout (PCI simplificado)',
+          'En producción en VPS OVH',
+          'Emails transaccionales + GDPR'
         ]
       },
       carpegram: {
         title: 'Carpegram',
-        description: 'Aplicación móvil social para aficionados a la pesca de carpas. Comparte tus capturas, lugares y consejos con la comunidad.',
-        features: [
-          'Feed de noticias y compartir fotos',
-          'Geolocalización de lugares de pesca',
-          'Mensajería privada entre pescadores'
+        tagline: 'Red social móvil para carpistas italianos',
+        description: 'Primer proyecto React Native: un Instagram vertical para la comunidad de pescadores de carpa italianos. Feed, mensajería, cartografía de spots, meteo enriquecida.',
+        highlights: [
+          'Primer proyecto React Native',
+          'Arquitectura en capas estricta',
+          'Cartografía con privacy por zonas'
         ]
       }
     },

@@ -38,7 +38,7 @@ export const projectsMeta = [
     id: 'campcameleonx',
     status: 'production',
     year: '2024–2025',
-    techStack: ['Laravel 12', 'API Platform', 'Vue.js 3', 'PostgreSQL', 'Docker'],
+    techStack: ['Laravel 12', 'API Platform', 'Vue.js 3', 'PostgreSQL', 'Docker', 'Stripe'],
     demoUrl: 'https://campcameleonx.ipace.dev/home',
     githubUrl: 'https://github.com/lapace90/CampCameleonX',
     cover: '/images/desert1.jpg',
