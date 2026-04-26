@@ -182,7 +182,7 @@ S'y ajoute une équipe multi-rôle aux besoins quotidiens très différents — 
       ],
     },
     detail: {
-      context: `Les outils numériques fournis aux lycées italiens sont fragmentés et peu ergonomiques sur mobile : chaque fonctionnalité — registre électronique, communication, prise de rendez-vous pour les interrogations — vit dans sa propre application avec son propre login. TuttoScuola unifie tout dans une seule app pensée pour étudiants, professeurs et administration d'un établissement précis (l'IIS Carlo Cattaneo pour commencer). Projet mené seule de la conception à la mise en production, aujourd'hui publié en closed testing sur le Google Play Store.`,
+      context: `Les outils numériques fournis aux lycées italiens sont fragmentés et peu ergonomiques sur mobile : chaque fonctionnalité — registre électronique, communication, prise de rendez-vous pour les interrogations — vit dans sa propre application avec son propre login. TuttoScuola unifie tout dans une seule app pensée pour étudiants, professeurs et administration d'un établissement précis (l'IIS Carlo Cattaneo de San Miniato pour commencer). Projet mené seule de la conception à la mise en production, aujourd'hui publié en closed testing sur le Google Play Store.`,
       businessLogicTitle: 'Comprendre le métier avant de coder',
       businessLogic: `Un lycée n'est pas une plateforme grand public ouverte. Les utilisateurs sont nominativement connus à l'avance (les élèves d'une classe, les professeurs d'un établissement) et l'inscription d'inconnus n'a aucun sens — on ne s'inscrit pas par hasard sur l'app de son école. La logique d'authentification doit refléter cette réalité, pas singer celle des réseaux sociaux.
 

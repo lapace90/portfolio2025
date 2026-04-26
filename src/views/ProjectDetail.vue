@@ -71,31 +71,31 @@
     <div class="bg-gradient-to-br from-purple-50 via-pink-50/30 to-blue-50/50">
       <div class="container-custom max-w-4xl px-4 md:px-8 py-20">
         <!-- Contexte -->
-        <section v-if="projectMeta?.detail?.context" class="mb-16">
+        <section v-if="detail?.context" class="mb-16">
           <h2 class="section-heading">{{ t.projects.contextHeading }}</h2>
           <div class="prose-content">
-            <p v-for="(paragraph, idx) in splitParagraphs(projectMeta?.detail?.context)" :key="idx">
+            <p v-for="(paragraph, idx) in splitParagraphs(detail?.context)" :key="idx">
               {{ paragraph }}
             </p>
           </div>
         </section>
 
         <!-- Comprendre le métier (optionnelle, mise en valeur) -->
-        <section v-if="projectMeta?.detail?.businessLogic" class="mb-16 business-section">
+        <section v-if="detail?.businessLogic" class="mb-16 business-section">
           <h2 class="section-heading">{{ t.projects.businessHeading }}</h2>
           <div class="prose-content">
-            <p v-for="(paragraph, idx) in splitParagraphs(projectMeta?.detail?.businessLogic)" :key="idx">
+            <p v-for="(paragraph, idx) in splitParagraphs(detail?.businessLogic)" :key="idx">
               {{ paragraph }}
             </p>
           </div>
         </section>
 
         <!-- Choix techniques -->
-        <section v-if="projectMeta?.detail?.choices?.length" class="mb-16">
+        <section v-if="detail?.choices?.length" class="mb-16">
           <h2 class="section-heading">{{ choicesHeading }}</h2>
           <div class="space-y-6">
             <div
-              v-for="choice in projectMeta?.detail?.choices"
+              v-for="choice in detail?.choices"
               :key="choice.title"
               class="choice-block"
             >
@@ -106,10 +106,10 @@
         </section>
 
         <!-- Roadmap -->
-        <section v-if="projectMeta?.detail?.roadmap" class="mb-16">
+        <section v-if="detail?.roadmap" class="mb-16">
           <h2 class="section-heading">{{ t.projects.roadmapHeading }}</h2>
           <div class="prose-content">
-            <p v-for="(paragraph, idx) in splitParagraphs(projectMeta?.detail?.roadmap)" :key="idx">
+            <p v-for="(paragraph, idx) in splitParagraphs(detail?.roadmap)" :key="idx">
               {{ paragraph }}
             </p>
           </div>
@@ -176,6 +176,9 @@ const projectMeta = computed(() => projectsMeta.find(p => p.id === id.value))
 
 // Contenu textuel depuis i18n
 const projectI18n = computed(() => t.value.projects?.[id.value])
+
+// Contenu détail : i18n si traduit, sinon fallback sur projectsMeta (français)
+const detail = computed(() => projectI18n.value?.detail ?? projectMeta.value?.detail)
 
 // Navigation prev/next - réactive sur le id pour fonctionner correctement
 // quand on navigue d'un projet à l'autre
